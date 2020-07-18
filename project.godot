@@ -22,8 +22,13 @@ config/icon="res://icon.png"
 
 window/size/width=1080
 window/size/height=1920
+<<<<<<< HEAD
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+=======
+window/size/test_width=540
+window/size/test_height=960
+>>>>>>> feat/character
 
 [rendering]
 

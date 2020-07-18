@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=1]
@@ -11,3 +12,12 @@ texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+=======
+[gd_scene format=2]
+
+[node name="Game" type="Node2D"]
+
+[node name="GameLayer" type="CanvasLayer" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+>>>>>>> feat/character
