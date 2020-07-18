@@ -1,32 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/backgrounds/light_background.png" type="Texture" id=1]
-[ext_resource path="res://assets/backgrounds/dark_background.png" type="Texture" id=2]
+[ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=1]
 
-[node name="Game" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Up part" type="Node2D" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="Up part"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Down part" type="Node2D" parent="."]
-position = Vector2( 0, 705 )
-z_index = 1
-
-[node name="Interface" type="Control" parent="Down part"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Down part"]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 1 )
