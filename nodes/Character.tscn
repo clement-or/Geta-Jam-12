@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/character/armR.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/character/body.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/character/handR.png" type="Texture" id=3]
+
+[node name="Character" type="Node2D"]
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Body" type="Polygon2D" parent="Body"]
+position = Vector2( -7.62939e-06, 0 )
+scale = Vector2( 0.1, 0.1 )
+offset = Vector2( -854.206, -1599.87 )
+texture = ExtResource( 2 )
+polygon = PoolVector2Array( 465.625, 231.25, 1090.63, 243.75, 1021.88, 631.25, 1050, 665.625, 1225, 800, 1190.63, 1231.25, 1193.75, 1293.75, 1206.25, 1350, 1212.5, 1821.88, 712.5, 2090.63, 534.375, 1843.75, 543.75, 1425, 534.375, 1337.5, 518.75, 1262.5, 568.75, 871.875, 562.5, 834.375, 456.25, 706.25 )
+uv = PoolVector2Array( 465.625, 231.25, 1090.63, 243.75, 1021.88, 631.25, 1050, 665.625, 1225, 800, 1190.63, 1231.25, 1193.75, 1293.75, 1206.25, 1350, 1212.5, 1821.88, 712.5, 2090.63, 534.375, 1843.75, 543.75, 1425, 534.375, 1337.5, 518.75, 1262.5, 568.75, 871.875, 562.5, 834.375, 456.25, 706.25 )
+
+[node name="HandR" type="Polygon2D" parent="Body"]
+position = Vector2( 25.0593, 39.596 )
+rotation = -0.0884497
+scale = Vector2( 0.1, 0.1 )
+offset = Vector2( -67.3062, -191.778 )
+texture = ExtResource( 3 )
+polygon = PoolVector2Array( 71.6216, -59.4595, 375.676, 22.973, 260.811, 364.865, -72.973, 271.622 )
+uv = PoolVector2Array( 71.6216, -59.4595, 375.676, 22.973, 260.811, 364.865, -72.973, 271.622 )
+
+[node name="ArmR" type="Polygon2D" parent="Body"]
+position = Vector2( 20.8971, -64.7569 )
+rotation = -0.0884497
+scale = Vector2( 0.1, 0.1 )
+offset = Vector2( -67.3062, -191.778 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 97.9591, -18.3673, 348.979, 157.143, 365.306, 251.02, 383.673, 614.286, 375.51, 679.592, 287.755, 1165.31, -38.7755, 1063.27, 59.1836, 675.51, 73.4694, 593.878, 14.2856, 418.367, -28.5715, 389.796, 8.16321, 55.102 )
+uv = PoolVector2Array( 97.9591, -18.3673, 348.979, 157.143, 365.306, 251.02, 383.673, 614.286, 375.51, 679.592, 287.755, 1165.31, -38.7755, 1063.27, 59.1836, 675.51, 73.4694, 593.878, 14.2856, 418.367, -28.5715, 389.796, 8.16321, 55.102 )
+
+[node name="ArmL" type="Polygon2D" parent="Body"]
+position = Vector2( 20.8971, -64.7569 )
+rotation = -0.0884497
+scale = Vector2( 0.1, 0.1 )
+offset = Vector2( -67.3062, -191.778 )
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 97.9591, -18.3673, 348.979, 157.143, 365.306, 251.02, 383.673, 614.286, 375.51, 679.592, 287.755, 1165.31, -38.7755, 1063.27, 59.1836, 675.51, 73.4694, 593.878, 14.2856, 418.367, -28.5715, 389.796, 8.16321, 55.102 )
+uv = PoolVector2Array( 97.9591, -18.3673, 348.979, 157.143, 365.306, 251.02, 383.673, 614.286, 375.51, 679.592, 287.755, 1165.31, -38.7755, 1063.27, 59.1836, 675.51, 73.4694, 593.878, 14.2856, 418.367, -28.5715, 389.796, 8.16321, 55.102 )
