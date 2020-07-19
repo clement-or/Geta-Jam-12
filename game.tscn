@@ -9,10 +9,10 @@
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="Down" type="ColorRect" parent="UILayer"]
-anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -1214.0
+margin_top = 706.0
+size_flags_horizontal = 3
 color = Color( 0.721569, 0.721569, 0.721569, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -21,6 +21,8 @@ __meta__ = {
 [node name="Up" type="ColorRect" parent="UILayer"]
 anchor_right = 1.0
 margin_bottom = 706.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -31,7 +33,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1.0
 margin_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
