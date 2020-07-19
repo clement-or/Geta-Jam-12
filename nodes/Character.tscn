@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/sprites/character/armR.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/character/body.png" type="Texture" id=2]
@@ -9,8 +9,10 @@
 [ext_resource path="res://assets/sprites/character/legL.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/character/boot.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/character/handAlt.png" type="Texture" id=9]
+[ext_resource path="res://nodes/Character.gd" type="Script" id=10]
 
 [node name="Character" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="Body" type="Node2D" parent="."]
 
@@ -130,6 +132,7 @@ bones = [ NodePath("Root"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 internal_vertex_count = 2
 
 [node name="Skeleton" type="Skeleton2D" parent="."]
+visible = false
 
 [node name="Root" type="Bone2D" parent="Skeleton"]
 position = Vector2( -9.21635, 35.0816 )

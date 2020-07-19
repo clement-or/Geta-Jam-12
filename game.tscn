@@ -1,26 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/filters/filter.png" type="Texture" id=1]
+[ext_resource path="res://nodes/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/elements/arrow_left.png" type="Texture" id=3]
 
 [node name="Game" type="Node2D"]
-
-[node name="GameLayer" type="CanvasLayer" parent="."]
-
-[node name="CenterContainer" type="CenterContainer" parent="GameLayer"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -1214.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GridContainer" type="GridContainer" parent="GameLayer/CenterContainer"]
-margin_left = 540.0
-margin_top = 607.0
-margin_right = 540.0
-margin_bottom = 607.0
-columns = 12
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
@@ -40,13 +24,76 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Texture" type="TextureRect" parent="UILayer"]
-anchor_left = -0.000462963
-anchor_right = 1.00046
-anchor_bottom = 1.00052
+[node name="Arrows" type="Control" parent="UILayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -178.402
+margin_bottom = -42.4023
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="TextureButton" parent="UILayer/Arrows"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = -63.5
+margin_right = 130.0
+margin_bottom = 63.5
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="right" type="TextureButton" parent="UILayer/Arrows"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -63.5
+margin_bottom = 63.5
+rect_scale = Vector2( -1, 1 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="TextureRect" parent="."]
+visible = false
+margin_left = -0.5
+margin_right = -0.5
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="GameLayer" type="CanvasLayer" parent="."]
+
+[node name="Character" parent="GameLayer" instance=ExtResource( 2 )]
+position = Vector2( 540, 341.431 )
+scale = Vector2( -1.6, 1.6 )
+
+[node name="CenterContainer" type="CenterContainer" parent="GameLayer"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1214.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="GameLayer/CenterContainer"]
+margin_left = 540.0
+margin_top = 607.0
+margin_right = 540.0
+margin_bottom = 607.0
+columns = 12
+[connection signal="button_down" from="UILayer/Arrows/left" to="GameLayer/Character" method="move_left"]
+[connection signal="button_up" from="UILayer/Arrows/left" to="GameLayer/Character" method="stop_moving"]
+[connection signal="button_down" from="UILayer/Arrows/right" to="GameLayer/Character" method="move_right"]
+[connection signal="button_up" from="UILayer/Arrows/right" to="GameLayer/Character" method="stop_moving"]
