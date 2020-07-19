@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/filters/filter.png" type="Texture" id=1]
 [ext_resource path="res://nodes/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/elements/arrow_left.png" type="Texture" id=3]
+[ext_resource path="res://nodes/Grid.tscn" type="PackedScene" id=4]
 
 [node name="Game" type="Node2D"]
 
@@ -77,22 +78,20 @@ __meta__ = {
 position = Vector2( 540, 341.431 )
 scale = Vector2( -1.6, 1.6 )
 
-[node name="CenterContainer" type="CenterContainer" parent="GameLayer"]
-visible = false
+[node name="Control" type="Control" parent="GameLayer"]
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_top = -1214.0
+margin_left = -510.0
+margin_top = -1127.63
+margin_right = 510.0
+margin_bottom = -107.635
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="GameLayer/CenterContainer"]
-margin_left = 540.0
-margin_top = 607.0
-margin_right = 540.0
-margin_bottom = 607.0
-columns = 12
+[node name="TileMap" parent="GameLayer/Control" instance=ExtResource( 4 )]
 [connection signal="button_down" from="UILayer/Arrows/left" to="GameLayer/Character" method="move_left"]
 [connection signal="button_up" from="UILayer/Arrows/left" to="GameLayer/Character" method="stop_moving"]
 [connection signal="button_down" from="UILayer/Arrows/right" to="GameLayer/Character" method="move_right"]
