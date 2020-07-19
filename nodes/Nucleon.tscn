@@ -1,5 +1,22 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="Nucleon" type="Node2D"]
+[ext_resource path="res://nodes/Nucleon.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/neutron.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/proton.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 41.7537
+
+[node name="Nucleon" type="StaticBody2D"]
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 1 )
+neutron_sprite = ExtResource( 2 )
+proton_sprite = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Raycast" type="RayCast2D" parent="."]

@@ -6,27 +6,13 @@
 
 [node name="GameLayer" type="CanvasLayer" parent="."]
 
-[node name="CenterContainer" type="CenterContainer" parent="GameLayer"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -1214.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GridContainer" type="GridContainer" parent="GameLayer/CenterContainer"]
-margin_left = 540.0
-margin_top = 607.0
-margin_right = 540.0
-margin_bottom = 607.0
-columns = 12
-
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="Down" type="ColorRect" parent="UILayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 706.0
+size_flags_horizontal = 3
 color = Color( 0.721569, 0.721569, 0.721569, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -35,18 +21,23 @@ __meta__ = {
 [node name="Up" type="ColorRect" parent="UILayer"]
 anchor_right = 1.0
 margin_bottom = 706.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Texture" type="TextureRect" parent="UILayer"]
-anchor_left = -0.000462963
-anchor_right = 1.00046
-anchor_bottom = 1.00052
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
