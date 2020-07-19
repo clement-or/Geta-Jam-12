@@ -91,7 +91,7 @@ right : 4
 """
 func can_be_placed_recursivity(not_used_dir : int):
 	var nb_neighbor_protons = get_nb_neighbor_proton()
-	return nb_neighbor_protons <= 2
+	return nb_neighbor_protons <= 1
 
 """ Setters """
 
