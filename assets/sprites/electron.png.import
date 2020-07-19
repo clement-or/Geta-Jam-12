@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/proton.png-4d24adea776e137bdc80aee8119f81c8.stex"
+path="res://.import/electron.png-31927b0699758fe636fd834c80589624.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/proton.png"
-dest_files=[ "res://.import/proton.png-4d24adea776e137bdc80aee8119f81c8.stex" ]
+source_file="res://assets/sprites/electron.png"
+dest_files=[ "res://.import/electron.png-31927b0699758fe636fd834c80589624.stex" ]
 
 [params]
 

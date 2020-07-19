@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/neutron.png-0bd8eddb98148ef7705dde52c3a69a4b.stex"
+path="res://.import/neutron.png-26423abb942edf8176f52064b1161495.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elements/neutron.png"
-dest_files=[ "res://.import/neutron.png-0bd8eddb98148ef7705dde52c3a69a4b.stex" ]
+source_file="res://assets/sprites/neutron.png"
+dest_files=[ "res://.import/neutron.png-26423abb942edf8176f52064b1161495.stex" ]
 
 [params]
 
